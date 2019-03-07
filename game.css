@@ -1,3 +1,42 @@
+.guess_the_number {
+	margin: 0;
+	font-family: "Arial", sans-serif;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 .game {
+
+}
+.nameOfTheGame {
+	font-size: 52px;
+	font-weight: bold;
+	margin: 0;
+	text-align: center;
+}
+.field {
+	margin: 0 auto;
+	width: 740px;
+	background-color: #f0f0f0;
+	border: 3px dashed #dedede;
+	box-shadow: 0 0 0 23px #f0f0f0;
+}
+.field__text {
+	font-size: 35px;
+	color: #212121;
+}
+.field__text_theme_lot {
+	font-size: 40;
+	font-weight: bold;
+	color: #3db12a;
+}
+.field__answer {
+
+}
+.field__guess {
+
+}
+.field__button {
 
 }
