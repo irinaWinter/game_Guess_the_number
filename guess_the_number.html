@@ -10,11 +10,13 @@
 		<main class="game">
 			<h1 class="nameOfTheGame">Угадай число</h1>
 			<div class="field">
+				<p class="field__answer">?</p>
 				<p class="field__text">Диапазон: от 0 до 100</p>
-				<p class="field__text">Осталось попыток: <span class="field__text_theme_lot">10</span></p>
-				<p class="field__answer">???</p>
-				<input class="field__guess" type="number" name="number">
-				<button class="field__button">Ввод</button>
+				<p class="field__text">Осталось попыток: <span class="field__text_guess">10</span></p>
+				<div class="field__action">
+					<input class="field__guess" type="text" name="number">
+					<button class="field__button">Ввод</button>
+				</div>	
 			</div>
 		</main>
 	</div>	

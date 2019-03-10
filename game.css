@@ -5,18 +5,21 @@
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+	height: 100vh;
 }
 .game {
-
+	
 }
 .nameOfTheGame {
 	font-size: 52px;
 	font-weight: bold;
-	margin: 0;
+	margin: 0 0 50px 0;
 	text-align: center;
 }
 .field {
+	box-sizing: border-box;
 	margin: 0 auto;
+	padding: 50px;
 	width: 740px;
 	background-color: #f0f0f0;
 	border: 3px dashed #dedede;
@@ -25,18 +28,53 @@
 .field__text {
 	font-size: 35px;
 	color: #212121;
+	margin: 25px;
 }
-.field__text_theme_lot {
-	font-size: 40;
-	font-weight: bold;
-	color: #3db12a;
-}
-.field__answer {
 
+.field__answer {
+	margin: 0;
+	width: 155px;
+	height: 155px;
+	box-sizing: border-box;
+	float: right;
+	background-color: #fff;
+	border: 4px solid #dedede;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 5%;
+	font-size: 80px;
+	font-weight: bold;
+}
+.field__action {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	margin-top: 70px;
 }
 .field__guess {
-
+	box-sizing: border-box;
+	width: 100%;
+	height: 50px;
+	padding-right: 160px;
+	border: 3px solid #ffc705;
+	border-radius: 10px;
+	text-align: center;
+	outline: none;
+	font-weight: bold;
+	font-size: 30px;
 }
 .field__button {
-
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 160px;
+	height: 50px;
+	background-color: #ffc705;
+	border: none;
+	outline: none;
+	border-radius: 0 10px 10px 0;
+	font-size: 25px;
+	color: #b45d00;
+	font-weight: bold;
+	cursor: pointer;
 }
