@@ -5,6 +5,8 @@ var range = document.querySelector('.field__range');
 var min = 0;
 var max = 100;
 range.textContent = 'от ' + min + ' до ' + max;
+var guesses = document.querySelector('.field__text_guess');
+guesses.textContent = 10;
 
 var button = document.querySelector('.field__button');
 button.onclick = function() {
@@ -17,10 +19,12 @@ button.onclick = function() {
 			answerField.textContent = 'Меньше';
 			max = Number((possibleAnswer.value), 10)
 			possibleAnswer.value = '';
+			guesses.textContent--;
 		} else {
 			answerField.textContent = 'Больше';
 			min = Number((possibleAnswer.value), 10)
 			possibleAnswer.value = '';
+			guesses.textContent--;
 		}	
 	};
 
