@@ -9,27 +9,27 @@ var guesses = document.querySelector('.field__text_guess');
 guesses.textContent = 10;
 
 var button = document.querySelector('.field__button');
-button.onclick = function() {
-	var gameplay = function(event) {
-		if (Number((possibleAnswer.value), 10) === answer) {
-			answerField.textContent = answer;
-			possibleAnswer.value = '';
-
-		} else if (Number((possibleAnswer.value), 10) > answer) {
-			answerField.textContent = 'Меньше';
-			max = Number((possibleAnswer.value), 10)
-			possibleAnswer.value = '';
-			guesses.textContent--;
-		} else {
-			answerField.textContent = 'Больше';
-			min = Number((possibleAnswer.value), 10)
-			possibleAnswer.value = '';
-			guesses.textContent--;
-		}	
-	};
-
-	gameplay();
+var gameplay = function() {
+	if (Number((possibleAnswer.value), 10) === answer) {
+		answerField.textContent = answer;
+		possibleAnswer.value = '';
+	} else if (Number((possibleAnswer.value), 10) > answer) {
+		answerField.textContent = 'Меньше';
+		max = Number((possibleAnswer.value), 10)
+		possibleAnswer.value = '';
+		guesses.textContent--;
+	} else {
+		answerField.textContent = 'Больше';
+		min = Number((possibleAnswer.value), 10)
+		possibleAnswer.value = '';
+		guesses.textContent--;
+	}	
 	range.textContent = 'от ' + min + ' до ' + max;
+};
+addEventListener('keyup', function(e) {
+	if (e.keyCode == 13) {
+		gameplay();
+	}
+});
+button.addEventListener('click', gameplay);
 
-
-}
