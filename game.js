@@ -8,14 +8,19 @@ button.onclick = function() {
 	var gameplay = function(event) {
 		if (Number((possibleAnswer.value), 10) === answer) {
 			answerField.textContent = answer;
+			possibleAnswer.value = '';
 		} else if (Number((possibleAnswer.value), 10) > answer) {
 			answerField.textContent = 'Меньше';
+			possibleAnswer.value = '';
 		} else {
 			answerField.textContent = 'Больше';
+			possibleAnswer.value = '';
 		}
 		if (event.keyCode == 13) alert('Привет');
 		addEventListener("keydown", gameplay);
+
 	};
 	gameplay();
+
 
 }
