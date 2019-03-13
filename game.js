@@ -33,3 +33,10 @@ addEventListener('keyup', function(e) {
 });
 button.addEventListener('click', gameplay);
 
+possibleAnswer.onkeypress= function(event){
+ if (event.charCode < 48 || event.charCode > 57)
+  return false;
+};
+
+
+

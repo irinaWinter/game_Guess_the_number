@@ -5,9 +5,10 @@
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+
 }
 .game {
-	
+	margin-top: 10%;
 }
 .nameOfTheGame {
 	font-size: 52px;
