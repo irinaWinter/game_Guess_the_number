@@ -1,2 +1,9 @@
 @import "game.css";
 @import "container.css";
+@import "field.css";
+@import "name_of_the_game.css";
+@import "field__answer.css";
+@import "field__text.css";
+@import "field__action.css";
+@import "field__button.css";
+@import "field__guess.css";

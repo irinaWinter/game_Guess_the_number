@@ -1,7 +1,7 @@
 var answer = Math.floor(Math.random() * 101);
 var answerField = document.querySelector('.field__answer');
 var possibleAnswer = document.querySelector('.field__guess');
-var range = document.querySelector('.field__range');
+var range = document.querySelector('.field__text_range');
 var min = 0;
 var max = 100;
 range.textContent = 'от ' + min + ' до ' + max;
