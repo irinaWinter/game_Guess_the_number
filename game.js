@@ -10,21 +10,29 @@ guesses.textContent = 10;
 
 var button = document.querySelector('.field__button');
 var gameplay = function() {
-	if (Number((possibleAnswer.value), 10) === answer) {
-		answerField.textContent = answer;
-		possibleAnswer.value = '';
-	} else if (Number((possibleAnswer.value), 10) > answer) {
-		answerField.textContent = 'Меньше';
-		max = Number((possibleAnswer.value), 10)
-		possibleAnswer.value = '';
-		guesses.textContent--;
+	if (possibleAnswer.value == ''
+		|| guesses.textContent == 0
+		|| possibleAnswer.value > max
+		|| possibleAnswer.value < min) {
+		return false
 	} else {
-		answerField.textContent = 'Больше';
-		min = Number((possibleAnswer.value), 10)
-		possibleAnswer.value = '';
-		guesses.textContent--;
-	}	
-	range.textContent = 'от ' + min + ' до ' + max;
+		if (Number((possibleAnswer.value), 10) === answer) {
+			answerField.textContent = answer;
+			possibleAnswer.value = '';
+			guesses.textContent--;
+		} else if (Number((possibleAnswer.value), 10) > answer) {
+			// answerField.textContent = 'Меньше';
+			max = Number((possibleAnswer.value), 10)
+			possibleAnswer.value = '';
+			guesses.textContent--;
+		} else if (Number((possibleAnswer.value), 10) < answer) {
+			// answerField.textContent = 'Больше';
+			min = Number((possibleAnswer.value), 10)
+			possibleAnswer.value = '';
+			guesses.textContent--;
+		}	
+		range.textContent = 'от ' + min + ' до ' + max;			
+	}
 };
 addEventListener('keyup', function(e) {
 	if (e.keyCode == 13) {
@@ -35,8 +43,7 @@ button.addEventListener('click', gameplay);
 
 // Запрет на ввод текста
 possibleAnswer.onkeypress= function(event){
- if (event.charCode < 48 || event.charCode > 57)
-  return false;
+ if (event.charCode < 48 || event.charCode > 57) return false;
 };
 
 
