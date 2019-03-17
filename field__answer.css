@@ -29,3 +29,12 @@
 		font-weight: bold;
 	}
 }
+@media screen and (min-width: 480px) {
+	.field__answer {
+		margin-bottom: 25px;
+		width: 200px;
+		height: 200px;
+		padding-top: 66px;
+		font-size: 60px;
+	}
+}
