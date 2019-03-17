@@ -4,9 +4,7 @@
 		margin: 0 auto;
 		padding: 15px 15px 20px;
 		width: 280px;
-		/*background-color: #f0f0f0;*/
 		border: 3px dashed #dedede;
-		/*box-shadow: 0 0 0 10px #f0f0f0;*/
 	}
 }
 @media screen and (min-width: 480px) {
@@ -17,18 +15,14 @@
 }
 @media screen and (min-width: 768px) {
 	.field {
-		width: 300px;
+		width: 700px;
+		padding: 30px 45px 40px;
 	}
 }
 @media screen and (min-width: 1000px) {
-/*	.field {
-		box-sizing: border-box;
-		margin: 0 auto;
+	.field {
 		padding: 50px;
 		width: 740px;
-		background-color: #f0f0f0;
-		border: 3px dashed #dedede;
-		box-shadow: 0 0 0 23px #f0f0f0;
-	}*/
+	}
 }
 
