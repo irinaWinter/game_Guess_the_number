@@ -41,9 +41,16 @@ addEventListener('keyup', function(e) {
 });
 button.addEventListener('click', gameplay);
 
+
+
 // Запрет на ввод текста
 possibleAnswer.onkeypress= function(event){
- if (event.charCode < 48 || event.charCode > 57) return false;
+	if (possibleAnswer.value.length < 3) {
+		if (event.charCode < 48 || event.charCode > 57) return false;
+	} else {
+		return false;
+	}
+ 	
 };
 
 
