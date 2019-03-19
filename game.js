@@ -21,17 +21,15 @@ var gameplay = function() {
 			possibleAnswer.value = '';
 			guesses.textContent--;
 		} else if (Number((possibleAnswer.value), 10) > answer) {
-			// answerField.textContent = 'Меньше';
 			max = Number((possibleAnswer.value), 10)
 			possibleAnswer.value = '';
 			guesses.textContent--;
 		} else if (Number((possibleAnswer.value), 10) < answer) {
-			// answerField.textContent = 'Больше';
 			min = Number((possibleAnswer.value), 10)
 			possibleAnswer.value = '';
 			guesses.textContent--;
 		}	
-		range.textContent = 'от ' + min + ' до ' + max;			
+		range.textContent = 'от ' + min + ' до ' + max;		
 	}
 };
 addEventListener('keyup', function(e) {
@@ -41,17 +39,13 @@ addEventListener('keyup', function(e) {
 });
 button.addEventListener('click', gameplay);
 
-
-
-// Запрет на ввод текста
-possibleAnswer.onkeypress= function(event){
-	if (possibleAnswer.value.length < 3) {
+// Проверка на ввод текста и превышение длины символов
+var validity = function (event) {
+	if (possibleAnswer.value.length < String(max).length) {
 		if (event.charCode < 48 || event.charCode > 57) return false;
 	} else {
 		return false;
 	}
- 	
-};
+}
 
-
-
+possibleAnswer.onkeypress = validity;
