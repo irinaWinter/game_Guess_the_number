@@ -12,13 +12,15 @@
 		<main class="game">
 			<h1 class="nameOfTheGame">Угадай число от 0 до 100</h1>
 			<div class="field">
-				<p class="field__answer">?</p>
+				<p class="field__answer center">?</p>
 				<p class="field__text">Диапазон: <span class="field__text_range"></span></p>
 				<p class="field__text">Осталось попыток: <span class="field__text_guess"></span></p>
 				<div class="field__action">
 					<input class="field__guess" type="text" name="number">
 					<button class="field__button">Ввод</button>
-				</div>	
+				</div>
+				<!-- <p class="field__message field__message_win">Вы угадали с&nbsp;100500&nbsp;попытки!</p> -->
+				<p class="field__message field__message_losing">Вы проиграли :(</p>	
 			</div>
 		</main>
 	</div>	

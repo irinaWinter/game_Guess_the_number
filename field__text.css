@@ -30,3 +30,6 @@
 		margin: 25px 0;
 	}
 }
+.field__text {
+	display: none;
+}
