@@ -4,9 +4,9 @@
 	height: 50px;
 	margin-top: 70px;
 }*/
-.field__action {
+/*.field__action {
 	display: none;
-}
+}*/
 @media screen and (min-width: 320px) {
 	.field__action {
 		position: relative;
