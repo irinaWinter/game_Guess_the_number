@@ -1,10 +1,10 @@
 var answer = Math.floor(Math.random() * 101);
 var answerField = document.querySelector('.field__answer');
 var possibleAnswer = document.querySelector('.field__guess');
-var range = document.querySelector('.field__text_range');
+var range = document.querySelector('.nameOfTheGame');
 var min = 0;
 var max = 100;
-range.textContent = 'от ' + min + ' до ' + max;
+range.textContent = 'Угадай число от ' + min + ' до ' + max;
 var guesses = document.querySelector('.field__text_guess');
 guesses.textContent = 10;
 
@@ -18,18 +18,18 @@ var gameplay = function() {
 	} else {
 		if (Number((possibleAnswer.value), 10) === answer) {
 			answerField.textContent = answer;
-			possibleAnswer.value = '';
+			possibleAnswer.value = answer;
 			guesses.textContent--;
 		} else if (Number((possibleAnswer.value), 10) > answer) {
-			max = Number((possibleAnswer.value), 10)
+			max = Number((possibleAnswer.value), 10);
 			possibleAnswer.value = '';
 			guesses.textContent--;
 		} else if (Number((possibleAnswer.value), 10) < answer) {
-			min = Number((possibleAnswer.value), 10)
+			min = Number((possibleAnswer.value), 10);
 			possibleAnswer.value = '';
 			guesses.textContent--;
 		}	
-		range.textContent = 'от ' + min + ' до ' + max;		
+		range.textContent = 'Угадай число от ' + min + ' до ' + max;		
 	}
 };
 addEventListener('keyup', function(e) {
